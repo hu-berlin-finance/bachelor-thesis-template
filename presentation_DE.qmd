@@ -1,0 +1,174 @@
+---
+title: "[Arbeitstitel Ihrer Bachelorarbeit]"
+subtitle: "Exposé · Bachelor Thesis Seminar"
+author: "[Ihr Name] ([Matrikel-Nr.])"
+institute: "Humboldt-Universität zu Berlin"
+date: today
+date-format: long
+lang: de
+format:
+  revealjs:
+    slide-number: true
+    footer: "[Ihr Name] · Exposé"
+    embed-resources: true
+    html-math-method: mathjax
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+---
+
+## Motivation
+
+- [Warum ist das Thema relevant? Beginnen Sie mit einem ökonomischen Rätsel oder einem Fakt, nicht mit der Methode.]
+- [Was wissen wir bereits, und was fehlt?]
+
+::: {.callout-note appearance="simple" icon=false}
+**Forschungsfrage:** [Ein Satz, idealerweise mit einem Fragezeichen am Ende.]
+:::
+
+::: {.callout-note appearance="simple" icon=false}
+**Beitrag:** [Ein Satz dazu, was wir aus Ihrer Arbeit lernen.]
+:::
+
+## Literatur im Überblick
+
+| Rolle | Paper | Was ich daraus übernehme |
+|:------|:------|:-------------------------|
+| Originalfaktor | [Autor (Jahr)] | [Faktordefinition, Konstruktion, Basisprämie] |
+| Referenzpaper | [Autor (Jahr)] | [Methode / Forschungsdesign, auf dem ich aufbaue] |
+| Weiteres Paper | [Autor (Jahr)] | [Ökonomischer Mechanismus hinter meinen Hypothesen] |
+
+: {tbl-colwidths="[20,35,45]"}
+
+## Originalpaper des Faktors
+
+**[Autor (Jahr)]**
+
+- **Fragestellung:** [Was untersuchen die Autor\*innen?]
+- **Daten & Methode:** [Stichprobe und Forschungsdesign]
+- **Zentrales Ergebnis:** [Höhe und Signifikanz der Prämie]
+- **Relevanz für meine Arbeit:** [Welches Ergebnis repliziere ich, und welche Frage lässt das Paper offen?]
+
+## Referenzpaper
+
+**[Autor (Jahr)]**
+
+- **Fragestellung:** [Was untersuchen die Autor\*innen?]
+- **Daten & Methode:** [Stichprobe und Forschungsdesign]
+- **Zentrales Ergebnis:** [Wichtigstes Resultat]
+- **Relevanz für meine Arbeit:** [Welchen Teil des Designs übernehme ich, und was mache ich anders?]
+
+## Weiteres relevantes Paper
+
+**[Autor (Jahr), Top-Journal]**
+
+- **Mechanismus:** [Welche ökonomischen Kräfte beschreibt das Paper?]
+- **Vorhersage:** [Was folgt daraus für Ihre Arbeit?]
+- **Relevanz für meine Arbeit:** [Welche Hypothese folgt aus diesem Paper?]
+
+## Hypothesen
+
+**H1 (Replikation):** [Der Faktor erzielt eine signifikante Prämie, wie von Autor (Jahr) berichtet.]
+
+- *Vorhersage:* [Vorzeichen und Höhe der ursprünglichen Prämie, des Alphas oder der t-Statistik.]
+
+**H2:** [Aussage, die durch die Daten widerlegt werden kann.]
+
+- *Begründung:* [...]
+- *Vorhersage:* [...]
+
+**H3 (optional):** [...]
+
+## Datenquellen {.smaller}
+
+| Quelle | Variablen | Frequenz | Zeitraum |
+|:-------|:----------|:---------|:---------|
+| CRSP | [Renditen, Preise, ausstehende Aktien, Börsencodes] | [Monatlich] | [JJJJ–JJJJ] |
+| Compustat | [Bilanzvariablen für meinen Faktor] | [Jährlich] | [JJJJ–JJJJ] |
+| Open Source Asset Pricing [@chen2022] | [Charakteristika / Factor Zoo] | [Monatlich] | [JJJJ–JJJJ] |
+| Tidy Finance Factor Library [@scheuch2023] | [Faktorrenditen über Konstruktionspfade] | [Monatlich] | [JJJJ–JJJJ] |
+| [Weitere, z. B. NBER, VIX, Sentiment] | [Zustandsvariablen] | [...] | [...] |
+
+: {tbl-colwidths="[25,40,15,20]"}
+
+[Löschen Sie die Quellen, die Sie nicht verwenden.]
+
+## Stichprobe
+
+- Universum: [z. B. Stammaktien an NYSE, AMEX, NASDAQ]
+- Zeitraum: [JJJJ–JJJJ], [N] Unternehmen, [N] Unternehmensmonate
+- Filter: [z. B. Preis, Größe, Finanzunternehmen, Versorger]
+- Timing: [Verzögerung der Bilanzdaten]
+
+## Faktorkonstruktion {.smaller}
+
+| Entscheidung | [Autor (Jahr)] | Meine Replikation |
+|:-------------|:---------------|:------------------|
+| Signal | [Definition] | [Gleich / Abweichung] |
+| Breakpoints | [z. B. NYSE-Dezile] | [Gleich / Abweichung] |
+| Gewichtung | [Wert- / gleichgewichtet] | [Gleich / Abweichung] |
+| Rebalancing | [Monatlich / jährlich] | [Gleich / Abweichung] |
+| Long-Short | [High minus Low] | [Gleich / Abweichung] |
+| Zeitraum | [JJJJ–JJJJ] | [JJJJ–JJJJ] |
+
+: {tbl-colwidths="[20,40,40]"}
+
+Open Source Asset Pricing [@chen2022] dokumentiert den ursprünglichen Implementierungspfad jedes Signals.
+
+## Modell für H1: Replikation
+
+Replikation von [Autor (Jahr)], möglichst nah am ursprünglichen Implementierungspfad.
+
+Long-Short-Strategie des Originalfaktors:
+
+$$
+[\text{Ihre Long-Short-Rendite, z. B. } r_{LS,t} = r_{\text{high},t} - r_{\text{low},t}]
+$$
+
+Zentraler Test 1 aus dem Originalpaper:
+
+$$
+[\text{Ihre Gleichung, z. B. Zeitreihenregression für das Alpha}]
+$$
+
+Zentraler Test 2 aus dem Originalpaper:
+
+$$
+[\text{Ihre Gleichung, z. B. Fama-MacBeth-Regression}]
+$$
+
+## Modell für H2: [Name]
+
+[Beschreiben Sie in einem Satz das Modell, mit dem Sie H2 testen.]
+
+$$
+[\text{Ihre Modellgleichung}]
+$$
+
+- Relevanter Koeffizient / Teststatistik: [z. B. $\alpha_1$]
+- Test: [z. B. $H_0: \alpha_1 = 0$]
+- Inferenz: [Standardfehler, Out-of-Sample-Evaluation, ...]
+
+## Modell für H3: [Name] (optional)
+
+[Beschreiben Sie in einem Satz das Modell, mit dem Sie H3 testen.]
+
+$$
+[\text{Ihre Modellgleichung}]
+$$
+
+- Relevanter Koeffizient / Teststatistik: [z. B. $\alpha_1$]
+- Test: [z. B. $H_0: \alpha_1 = 0$]
+- Inferenz: [Standardfehler, Out-of-Sample-Evaluation, ...]
+
+## Offene Fragen
+
+- [Frage 1, z. B. zur Datenverfügbarkeit oder zu einer Konstruktionsentscheidung]
+- [Frage 2, z. B. zur Identifikation Ihrer Hypothesen]
+- [Frage 3, z. B. zum Umfang der Arbeit]
+
+## Literatur
+
+::: {#refs}
+:::

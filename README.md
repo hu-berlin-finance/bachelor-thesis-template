@@ -26,3 +26,4 @@ Replace all placeholder content with your own research before submission.
 - `thesis_EN.qmd` / `thesis_DE.qmd` — Main Quarto document
 - `thesis_EN.pdf` / `thesis_DE.pdf` - Rendered PDF output
 - `references.bib` — BibTeX bibliography file
+- `presentation_EN.qmd` / `presentation_DE.qmd` — Reveal.js template for the thesis outline presentation in the seminar
