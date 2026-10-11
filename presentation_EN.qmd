@@ -1,0 +1,173 @@
+---
+title: "[Working Title of Your Thesis]"
+subtitle: "Thesis Outline · Bachelor Thesis Seminar"
+author: "[Your Name] ([Student No.])"
+institute: "Humboldt-Universität zu Berlin"
+date: today
+date-format: long
+format:
+  revealjs:
+    slide-number: true
+    footer: "[Your Name] · Thesis Outline"
+    embed-resources: true
+    html-math-method: mathjax
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+---
+
+## Motivation
+
+- [Why does this topic matter? Start from an economic puzzle or a fact, not from the method.]
+- [What do we know already, and what is missing?]
+
+::: {.callout-note appearance="simple" icon=false}
+**Research question:** [One sentence, ideally ending with a question mark.]
+:::
+
+::: {.callout-note appearance="simple" icon=false}
+**Contribution:** [One sentence on what we learn from your thesis.]
+:::
+
+## Literature at a Glance
+
+| Role | Paper | What I take from it |
+|:-----|:------|:--------------------|
+| Original factor | [Author (Year)] | [Factor definition, construction, baseline premium] |
+| Reference paper | [Author (Year)] | [Method / research design I build on] |
+| Another paper | [Author (Year)] | [Economic mechanism behind my hypotheses] |
+
+: {tbl-colwidths="[20,35,45]"}
+
+## Original Factor Paper
+
+**[Author (Year)]**
+
+- **Question:** [What do they ask?]
+- **Data & method:** [Sample and research design]
+- **Main finding:** [Size and significance of the premium]
+- **Relevance for my thesis:** [Which result do I replicate, and which open question does the paper leave?]
+
+## Reference Paper
+
+**[Author (Year)]**
+
+- **Question:** [What do they ask?]
+- **Data & method:** [Sample and research design]
+- **Main finding:** [Key result]
+- **Relevance for my thesis:** [Which part of their design do I adopt, and what do I do differently?]
+
+## Another Relevant Paper
+
+**[Author (Year), top journal]**
+
+- **Mechanism:** [Which economic forces does the paper describe?]
+- **Prediction:** [What does it imply for your thesis?]
+- **Relevance for my thesis:** [Which of the hypotheses follows from this paper?]
+
+## Hypotheses
+
+**H1 (Replication):** [The factor earns a significant premium, as reported by Author (Year).]
+
+- *Prediction:* [Sign and magnitude of the original premium, alpha, or t-statistic.]
+
+**H2:** [Statement that can be rejected by the data.]
+
+- *Rationale:* [...]
+- *Prediction:* [...]
+
+**H3 (optional):** [...]
+
+## Data Sources {.smaller}
+
+| Source | Variables | Frequency | Period |
+|:-------|:----------|:----------|:-------|
+| CRSP | [Returns, prices, shares outstanding, exchange codes] | [Monthly] | [YYYY–YYYY] |
+| Compustat | [Accounting variables needed for my factor] | [Annual] | [YYYY–YYYY] |
+| Open Source Asset Pricing [@chen2022] | [Characteristics / factor zoo] | [Monthly] | [YYYY–YYYY] |
+| Tidy Finance Factor Library [@scheuch2023] | [Factor returns across construction paths] | [Monthly] | [YYYY–YYYY] |
+| [Other, e.g., NBER, VIX, sentiment] | [State variables] | [...] | [...] |
+
+: {tbl-colwidths="[25,40,15,20]"}
+
+[Delete the sources you do not use.]
+
+## Sample
+
+- Universe: [e.g., common stocks on NYSE, AMEX, NASDAQ]
+- Period: [YYYY–YYYY], [N] firms, [N] firm-months
+- Filters: [e.g., price, size, financials, utilities]
+- Timing: [Lag of accounting data]
+
+## Factor Construction {.smaller}
+
+| Choice | [Author (Year)] | My replication |
+|:-------|:----------------|:---------------|
+| Signal | [Definition] | [Same / deviation] |
+| Breakpoints | [e.g., NYSE deciles] | [Same / deviation] |
+| Weighting | [Value- / equal-weighted] | [Same / deviation] |
+| Rebalancing | [Monthly / annually] | [Same / deviation] |
+| Long-short | [High minus low] | [Same / deviation] |
+| Sample period | [YYYY–YYYY] | [YYYY–YYYY] |
+
+: {tbl-colwidths="[20,40,40]"}
+
+Open Source Asset Pricing [@chen2022] documents the original implementation path of each signal.
+
+## Model for H1: Replication
+
+Replication of [Author (Year)], following their implementation path as closely as possible.
+
+Long-short strategy of the original factor:
+
+$$
+[\text{Your long-short return, e.g., } r_{LS,t} = r_{\text{high},t} - r_{\text{low},t}]
+$$
+
+Key test 1 from the original paper:
+
+$$
+[\text{Your equation, e.g., time-series alpha regression}]
+$$
+
+Key test 2 from the original paper:
+
+$$
+[\text{Your equation, e.g., Fama-MacBeth regression}]
+$$
+
+## Model for H2: [Name]
+
+[Describe the model that tests H2 in one sentence.]
+
+$$
+[\text{Your model equation}]
+$$
+
+- Coefficient / statistic of interest: [e.g., $\alpha_1$]
+- Test: [e.g., $H_0: \alpha_1 = 0$]
+- Inference: [standard errors, out-of-sample evaluation, ...]
+
+## Model for H3: [Name] (optional)
+
+[Describe the model that tests H3 in one sentence.]
+
+$$
+[\text{Your model equation}]
+$$
+
+- Coefficient / statistic of interest: [e.g., $\alpha_1$]
+- Test: [e.g., $H_0: \alpha_1 = 0$]
+- Inference: [standard errors, out-of-sample evaluation, ...]
+
+## Open Questions
+
+- [Question 1, e.g., on data availability or a construction choice]
+- [Question 2, e.g., on the identification of your hypotheses]
+- [Question 3, e.g., on the scope of the thesis]
+
+## References
+
+::: {#refs}
+:::
